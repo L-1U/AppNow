@@ -2,7 +2,7 @@ from flask import Flask
 from flask import request
 from github import Github
 
-
+port = sys.argv[1]
 app = Flask(__name__)
 
 @app.route('/hellow')
@@ -31,4 +31,4 @@ def github():
     return st
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0')
+    app.run(debug=True,host='0.0.0.0',port=port)
